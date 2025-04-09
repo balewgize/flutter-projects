@@ -1,16 +1,17 @@
-# dice_roll
+## Dice Roller
 
-A new Flutter project.
+A simple flutter app that rolls a dice.
 
-## Getting Started
+It shows a random dice image every time the button is pressed.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+### What did I learn?
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Flutter and Dart basics
+- Variables, functions, types and classes in Dart
+- Creating custom widgets
+- Splitting a widget into multiple files
+- Stateless vs Statefull widgets
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Screenshots
+![Dice Roller](../screenshots/dice_roll.png)
