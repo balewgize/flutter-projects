@@ -1,4 +1,8 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
+
+import 'package:dice_roll/styled_text.dart';
 
 class DiceRoller extends StatefulWidget {
   const DiceRoller({super.key});
@@ -10,10 +14,12 @@ class DiceRoller extends StatefulWidget {
 }
 
 class _DiceRollerState extends State<DiceRoller> {
-  var activeDiceImage = 'assets/images/dice-2.png';
+  var currentDiceRoll = 2;
 
   void rollDice() {
-    activeDiceImage = 'assets/images/dice-4.png';
+    setState(() {
+      currentDiceRoll = Random().nextInt(6) + 1;
+    });
   }
 
   @override
@@ -21,18 +27,11 @@ class _DiceRollerState extends State<DiceRoller> {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Image.asset(activeDiceImage, width: 200),
+        Image.asset('assets/images/dice-$currentDiceRoll.png', width: 200),
         const SizedBox(height: 20),
-        TextButton(
+        ElevatedButton(
           onPressed: rollDice,
-          style: TextButton.styleFrom(
-            // padding: const EdgeInsets.only(
-            //   top: 20,
-            // ),
-            foregroundColor: Colors.white,
-            textStyle: const TextStyle(fontSize: 28),
-          ),
-          child: const Text('Roll Dice'),
+          child: const StyledText('Roll Dice'),
         ),
       ],
     );
